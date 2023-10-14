@@ -1,0 +1,33 @@
+# Dependencias
+node_modules/
+
+# Archivos de compilación TypeScript
+dist/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Archivos de configuración específicos de tu entorno
+.env
+
+# Archivos de caché de Yarn
+.yarn
+
+# Archivos de caché de Docker
+.docker
+
+# Otros archivos generados en tiempo de ejecución
+.DS_Store
+*.pem
+
+# Archivos de respaldo de IDE
+.idea/
+.vscode/
+
+# Otros archivos o carpetas específicos de tu configuración local
