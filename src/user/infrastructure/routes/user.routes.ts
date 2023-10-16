@@ -3,9 +3,10 @@ import { UserUseCase } from "../../aplication/userUseCase";
 import { UserController } from "../controller/user.controller";
 import { MockRepository } from "../repository/mock.repository";
 import { MongoRepository } from "../repository/mongo.repository"
+import { SequelizeRepository } from "../repository/sequelize.repository"
 
 const route = Router();
-const userRepo = new MongoRepository();
+const userRepo = new SequelizeRepository();
 const userUseCase = new UserUseCase(userRepo);
 const userCtrl = new UserController(userUseCase);
 

@@ -31,3 +31,7 @@ lerna-debug.log*
 .vscode/
 
 # Otros archivos o carpetas específicos de tu configuración local
+models/
+config/
+migrations/
+seeders/

@@ -1,4 +1,5 @@
 import { v4 as uuid } from "uuid";
+import bcrypt from "bcrypt";
 import { UserEntity } from "./user.domain";
 
 export class UserValue implements UserEntity {
@@ -26,6 +27,10 @@ export class UserValue implements UserEntity {
     this.middlename = middlename;
     this.lastname = lastname;
     this.email = email;
-    this.password = password;
+    this.password = this.encryptPassword(password);
+  }
+
+  private encryptPassword(password: string): string {
+    return bcrypt.hashSync(password, Number(process.env.SALT_ROUNDS));
   }
 }
